@@ -28,7 +28,7 @@ file:
     - "Lagoon Drupal 8 configuration file."
   /usr/bin/govcms-deploy:
     exists: true
-    mode: "0777"
+    mode: "0755"
   /app/web/sites:
     exists: true
     filetype: directory

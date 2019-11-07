@@ -23,6 +23,7 @@ RUN composer install -d /app \
 COPY .docker/sanitize.sh /app/sanitize.sh
 
 COPY .docker/images/govcms8/scripts /usr/bin/
+RUN chmod 755 /usr/bin/govcms-deploy
 COPY .docker/images/govcms8/govcms.site.yml /app/drush/sites/
 
 RUN mkdir -p /app/web/sites/default/files/private \
