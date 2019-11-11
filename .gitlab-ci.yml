@@ -173,23 +173,24 @@ deploy:beta:
   only:
     - master
 
-deploy:latest:
-  <<: *deploy
-  variables:
-    <<: *vars
-    IMAGE_TAG_EDGE: latest
-    DOCKERHUB_NAMESPACE: "govcms8lagoon"
-    COMPOSE_PROJECT_NAME: "govcms8lagoon"
-  only:
-    - tags
+# @TODO: Allow automatic deployds of latest and tags after
+# the process has been validated.
+# deploy:latest:
+#   <<: *deploy
+#   variables:
+#     <<: *vars
+#     IMAGE_TAG_EDGE: latest
+#     DOCKERHUB_NAMESPACE: "govcms8lagoon"
+#     COMPOSE_PROJECT_NAME: "govcms8lagoon"
+#   only:
+#     - tags
 
-# @TODO: Deploy tagged verison.
-deploy:tag:
-  <<: *deploy
-  variables:
-    <<: *vars
-    IMAGE_TAG_EDGE: $CI_COMMIT_TAG
-    DOCKERHUB_NAMESPACE: "govcms8lagoon"
-    COMPOSE_PROJECT_NAME: "govcms8lagoon"
-  only:
-    - tags
+# deploy:tag:
+#   <<: *deploy
+#   variables:
+#     <<: *vars
+#     IMAGE_TAG_EDGE: $CI_COMMIT_TAG
+#     DOCKERHUB_NAMESPACE: "govcms8lagoon"
+#     COMPOSE_PROJECT_NAME: "govcms8lagoon"
+#   only:
+#     - tags
