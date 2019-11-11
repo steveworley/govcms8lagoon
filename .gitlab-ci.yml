@@ -173,7 +173,7 @@ deploy:beta:
   only:
     - master
 
-# @TODO: Allow automatic deployds of latest and tags after
+# @TODO: Allow automatic deploys of latest and tags after
 # the process has been validated.
 # deploy:latest:
 #   <<: *deploy
